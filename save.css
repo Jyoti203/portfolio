@@ -1,0 +1,232 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 8%;
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #00e6ff;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 8%;
+  flex-wrap: wrap;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+}
+
+.hero-text span {
+  color: #00e6ff;
+}
+
+.hero-text h2 {
+  margin: 10px 0;
+  color: #ccc;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.primary {
+  background: #00e6ff;
+  color: #000;
+}
+
+.secondary {
+  border: 2px solid #00e6ff;
+  color: #00e6ff;
+}
+
+.secondary:hover {
+  background: #00e6ff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.hero-img img {
+  border-radius: 50%;
+  width: 280px;
+  border: 3px solid #00e6ff;
+  box-shadow: 0 0 20px #00e6ff;
+}
+
+/* SECTIONS */
+.section {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+.glass {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  margin: 20px auto;
+}
+
+/* SKILLS */
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.skill-card {
+  padding: 20px 30px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* SKILLS HOVER POP EFFECT */
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.03); /* subtle lift + small scale */
+  box-shadow: 0 8px 15px rgba(0,230,255,0.5), 0 0 10px rgba(0,230,255,0.3); /* soft neon glow */
+  background: rgba(0,230,255,0.15); /* light blue highlight */
+  color: #f8f3f3; /* text color dark for contrast */
+}
+/* PROJECTS */
+.project-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,230,255,0.4);
+}
+
+/* PROJECT LINKS */
+.project-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.project-links a {
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  background: #00e6ff;
+  color: #000;
+  transition: 0.3s;
+}
+
+.project-links a:hover {
+  background: #fff;
+  color: #00e6ff;
+  transform: scale(1.05);
+}
+
+/* CONTACT */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 15px auto; /* center form */
+  width: 90%;          /* screen ke hisaab se chhota width */
+  max-width: 350px;    /* maximum width limit */
+}
+
+input, textarea {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  width: 100%;         /* form ke andar hi fit ho */
+  box-sizing: border-box;
+}
+
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-img {
+    margin-top: 30px;
+  }
+  .project-card {
+    width: 100%;
+  }
+  .skill-card {
+    width: 45%; /* 2 cards per row on tablet */
+  }
+}
+
+@media(max-width:480px){
+  .skill-card {
+    width: 100%; /* 1 card per row on mobile */
+  }
+}
